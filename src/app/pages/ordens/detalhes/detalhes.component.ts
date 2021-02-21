@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-detalhes',
@@ -7,7 +7,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./detalhes.component.scss']
 })
 export class DetalhesComponent implements OnInit {
-  ordem = null;
+
+  navigationExtras: NavigationExtras = {
+    state: {
+      value: null
+    }
+  };
+
+  ordem: any = null;
   constructor(private route: Router) {
     const navigation = this.route.getCurrentNavigation();
     this.ordem = navigation?.extras?.state;
@@ -16,6 +23,17 @@ export class DetalhesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // PAROU EM 41:20
+  onGoToEditar(): void {
+    this.navigationExtras.state.value = this.ordem;
+    this.route.navigate(['editar'], this.navigationExtras);
+  }
+
+  onGoToFinalizar(): void {
+    alert('Finalizado!');
+  }
+
+  onGoBackToLista(): void{
+    this.route.navigate(['list']);
+  }
 
 }

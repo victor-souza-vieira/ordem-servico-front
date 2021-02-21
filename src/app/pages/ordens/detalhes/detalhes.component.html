@@ -28,9 +28,9 @@
     </ul>
   </div>
   <div class="btn-group" role="group">
-    <button class="btn btn-warning m-1 btn-sm">Editar</button>
-    <button class="btn btn-danger m-1 btn-sm">Finalizar</button>
+    <button class="btn btn-warning m-1 btn-sm" (click)="onGoToEditar()">Editar</button>
+    <button class="btn btn-danger m-1 btn-sm" (click)="onGoToFinalizar()">Finalizar</button>
   </div>
 </div>
-<button class="btn btn-secondary mb-4 mt-2">Retornar</button>
+<button class="btn btn-secondary mb-4 mt-2" (click)="onGoBackToLista()" >Retornar</button>
 
