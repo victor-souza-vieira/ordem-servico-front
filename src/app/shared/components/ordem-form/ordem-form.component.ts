@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Ordem } from 'src/app/shared/models/ordem.interface';
+import { Ordem } from '../../models/ordem.interface';
 
 @Component({
-  selector: 'app-editar',
-  templateUrl: './editar.component.html',
-  styleUrls: ['./editar.component.scss']
+  selector: 'app-ordem-form',
+  templateUrl: './ordem-form.component.html',
+  styleUrls: ['./ordem-form.component.scss']
 })
-export class EditarComponent implements OnInit {
-
+export class OrdemFormComponent implements OnInit {
   ordem: Ordem;
   ordemForm: FormGroup;
   constructor(private route: Router, private fb: FormBuilder) {
@@ -43,5 +42,4 @@ export class EditarComponent implements OnInit {
   onGoBackLista(): void{
     this.route.navigate(['list']);
   }
-
 }
