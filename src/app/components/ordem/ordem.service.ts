@@ -39,4 +39,9 @@ export class OrdemService {
     const url = `${this.baseUrl}/${ordem.id}`
     return this.httpClient.put<Ordem>(url, ordem)
   }
+
+  delete(ordem: Ordem): Observable<any>{
+    const url = `${this.baseUrl}/${ordem.id}`
+    return this.httpClient.delete<any>(url)
+  }
 }

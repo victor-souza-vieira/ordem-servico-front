@@ -21,7 +21,7 @@ const routes: Routes = [
   {
     path: "ordens/update/:id",
     component: OrdemUpdateComponent
-  }
+  },
 ];
 
 @NgModule({
