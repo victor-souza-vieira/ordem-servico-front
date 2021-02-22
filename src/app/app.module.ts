@@ -19,6 +19,8 @@ import { HomeComponent } from './views/home/home.component';
 import { OrdemCrudComponent } from './views/ordem-crud/ordem-crud.component';
 import { OrdemCreateComponent } from './components/ordem/ordem-create/ordem-create.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { OrdemCreateComponent } from './components/ordem/ordem-create/ordem-crea
     MatListModule,
     MatCardModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
