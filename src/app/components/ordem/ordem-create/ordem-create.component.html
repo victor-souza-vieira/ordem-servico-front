@@ -1,6 +1,38 @@
-<button mat-raised-button (click)="createOrdem()" color="primary">
-    Salvar
-</button>
-<button mat-raised-button (click)="cancelar()" color="danger">
-    Cancelar
-</button>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Nova ordem de serviço</mat-card-title>
+    </mat-card-header>
+
+    <form action="">
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="ordem.nomeCliente" name="nome">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Tel ex. (79) 9 9999-9999" [(ngModel)]="ordem.telefone" name="telefone">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Endereço" [(ngModel)]="ordem.endereco" name="endereco">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Preço (R$)" [(ngModel)]="ordem.preco" name="preco">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Busto (cm)" [(ngModel)]="ordem.busto" name="busto">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Cintura (cm)" [(ngModel)]="ordem.cintura" name="cintura">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Quadril (cm)" [(ngModel)]="ordem.quadril" name="quadril">
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="createOrdem()" color="primary">
+        Salvar
+    </button>
+    <button mat-raised-button (click)="cancelar()" color="danger">
+        Cancelar
+    </button>
+</mat-card>
+
+

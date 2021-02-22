@@ -11,13 +11,13 @@ import { Router } from '@angular/router';
 export class OrdemCreateComponent implements OnInit {
 
   ordem: Ordem = {
-    nomeCliente: "Maria Clara",
-    telefone: "909990909",
-    endereco: "endereco é lá",
-    preco: 11,
-    busto: 12.4,
-    cintura: 13.5,
-    quadril: 14.6,
+    nomeCliente: "",
+    telefone: "",
+    endereco: "",
+    preco: 0,
+    busto: 0,
+    cintura: 0,
+    quadril: 0,
   }
 
   constructor(private ordemService: OrdemService,
@@ -29,7 +29,7 @@ export class OrdemCreateComponent implements OnInit {
 
   createOrdem(): void{
     this.ordemService.create(this.ordem).subscribe(() => {
-      this.ordemService.showMessage('hey broder!')
+      this.ordemService.showMessage('Ordem de serviço criada!')
       this.router.navigate(['/ordens'])
     })
     
