@@ -25,4 +25,8 @@ export class OrdemService {
   create(ordem: Ordem): Observable<Ordem> {
     return this.httpClient.post<Ordem>(this.baseUrl, ordem);
   }
+
+  read(): Observable<Ordem[]>{
+    return this.httpClient.get<Ordem[]>(this.baseUrl);
+  }
 }

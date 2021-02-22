@@ -7,4 +7,7 @@ export interface Ordem{
 	busto: number
 	cintura: number
 	quadril: number
+	status?: string
+	data_abertura?: string
+	data_encerramento?: string
 }
