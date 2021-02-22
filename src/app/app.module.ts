@@ -24,6 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+
 import { OrdemReadComponent } from './components/ordem/ordem-read/ordem-read.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -31,6 +33,8 @@ import { MatSortModule } from '@angular/material/sort';
 
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { OrdemUpdateComponent } from './components/ordem/ordem-update/ordem-update.component';
+import { MatNativeDateModule } from '@angular/material/core';
 
 registerLocaleData(localePt);
 
@@ -45,6 +49,7 @@ registerLocaleData(localePt);
     OrdemCrudComponent,
     OrdemCreateComponent,
     OrdemReadComponent,
+    OrdemUpdateComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,11 +67,16 @@ registerLocaleData(localePt);
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   providers: [{
     provide: LOCALE_ID,
-    useValue: 'pt-BR'
+    useValue: 'pt-BR',
+  },
+  {
+    provide: MatNativeDateModule
   }],
   bootstrap: [AppComponent]
 })

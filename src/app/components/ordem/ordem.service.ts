@@ -29,4 +29,14 @@ export class OrdemService {
   read(): Observable<Ordem[]>{
     return this.httpClient.get<Ordem[]>(this.baseUrl);
   }
+  
+  readById(id: any): Observable<Ordem>{
+    const url = `${this.baseUrl}/${id}`
+    return this.httpClient.get<Ordem>(url)
+  }
+
+  update(ordem: Ordem): Observable<Ordem>{
+    const url = `${this.baseUrl}/${ordem.id}`
+    return this.httpClient.put<Ordem>(url, ordem)
+  }
 }

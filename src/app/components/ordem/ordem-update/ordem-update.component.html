@@ -1,0 +1,59 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Alterar ordem de serviço nº {{ordem.id}}</mat-card-title>
+    </mat-card-header>
+
+    <form action="">
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="ordem.nomeCliente" name="nome">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Tel ex. (79) 9 9999-9999" [(ngModel)]="ordem.telefone" name="telefone">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Endereço" [(ngModel)]="ordem.endereco" name="endereco">
+        </mat-form-field>
+        <!--mat-form-field>
+            <input matInput placeholder="Abertura" [(ngModel)]="ordem.data_abertura" name="data_abertura">
+        </mat-form-field-->
+        <!--mat-form-field>
+            <input matInput placeholder="Encerramento" [(ngModel)]="ordem.data_encerramento" name="data_encerramento">
+        </mat-form-field-->
+        <!--Data-->
+        <mat-form-field appearance="fill">
+            <mat-label>Abertura</mat-label>
+            <input matInput [matDatepicker]="picker1" [(ngModel)]="ordem.data_abertura" name="data_abertura">
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Encerramento</mat-label>
+            <input matInput [matDatepicker]="picker2" [(ngModel)]="ordem.data_encerramento" name="data_encerramento">
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+        <!--Fim data-->
+        <mat-form-field>
+            <input matInput placeholder="Preço (R$)" [(ngModel)]="ordem.preco" name="preco">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Busto (cm)" [(ngModel)]="ordem.busto" name="busto">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Cintura (cm)" [(ngModel)]="ordem.cintura" name="cintura">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Quadril (cm)" [(ngModel)]="ordem.quadril" name="quadril">
+        </mat-form-field>
+              
+    </form>
+
+    <button mat-raised-button (click)="updateOrdem()" color="primary">
+        Salvar
+    </button>
+    <button mat-raised-button (click)="cancelar()" color="danger">
+        Cancelar
+    </button>
+</mat-card>
+
+

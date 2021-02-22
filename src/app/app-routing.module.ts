@@ -1,3 +1,4 @@
+import { OrdemUpdateComponent } from './components/ordem/ordem-update/ordem-update.component';
 import { OrdemCreateComponent } from './components/ordem/ordem-create/ordem-create.component';
 import { OrdemCrudComponent } from './views/ordem-crud/ordem-crud.component';
 import { HomeComponent } from './views/home/home.component';
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: "ordens/ordem-create",
     component: OrdemCreateComponent
+  },
+  {
+    path: "ordens/update/:id",
+    component: OrdemUpdateComponent
   }
 ];
 

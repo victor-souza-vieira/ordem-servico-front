@@ -10,7 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class OrdemReadComponent implements OnInit {
 
   ordens: Ordem[] = []
-  displayedColumns = ['Nº', 'Cliente', 'Telefone', 'Preço (R$)', 'Status', 'Abertura', 'Encerramento']
+  displayedColumns = ['Nº', 'Cliente', 'Telefone', 'Preço (R$)', 
+                      'Status', 'Abertura', 'Encerramento', 'actions']
   constructor(private ordemService: OrdemService) { 
     
   }
