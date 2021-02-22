@@ -42,11 +42,13 @@ export class OrdemUpdateComponent implements OnInit {
   }
 
   updateOrdem(): void {
-    this.ordem.data_abertura = typeof this.ordem.data_abertura == 'object' ?
-    `${new Date(this.ordem.data_abertura).toISOString()}` : ""
-
-    this.ordem.data_encerramento = typeof this.ordem.data_encerramento == 'object' ?
-    `${new Date(this.ordem.data_encerramento).toISOString()}` : ""
+    if(this.ordem.data_abertura){
+      this.ordem.data_abertura = `${new Date(this.ordem.data_abertura).toISOString()}`
+    }
+    
+    if(this.ordem.data_encerramento){
+      this.ordem.data_encerramento = `${new Date(this.ordem.data_encerramento).toISOString()}`
+    }
 
     
     this.ordemService.update(this.ordem).subscribe(() => {

@@ -25,6 +25,7 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { OrdemReadComponent } from './components/ordem/ordem-read/ordem-read.component';
 import { MatTableModule } from '@angular/material/table';
@@ -70,6 +71,7 @@ registerLocaleData(localePt);
     MatSortModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatTooltipModule
   ],
   providers: [{
     provide: LOCALE_ID,
