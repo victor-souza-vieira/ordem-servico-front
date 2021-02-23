@@ -27,7 +27,7 @@ export class OrdemReadComponent implements OnInit {
   deletar(ordem: Ordem){
     this.ordemService.delete(ordem).subscribe(() => {
       this.ordemService.showMessage("Excluído com sucesso")
-      this.router.navigate(['ordens'])
+      this.router.navigate(['/ordens'])
     })
   }
 
